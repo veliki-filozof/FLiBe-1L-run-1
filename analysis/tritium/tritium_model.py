@@ -153,7 +153,7 @@ for stream, samples in general_data["tritium_detection"].items():
             continue
         for vial_nb, filename in sample_dict["lsc_vials_filenames"].items():
             sample = create_sample(
-                label=f"1L-{stream}_{run_nb}-{sample_nb}-{vial_nb}",
+                label=f"1L-FLB-{stream}_{run_nb}-{sample_nb}-{vial_nb}",
                 filename=f"{lsc_data_folder}/{filename}",
                 background_curve=background_curve,
             )
