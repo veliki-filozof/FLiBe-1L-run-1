@@ -1,0 +1,548 @@
+{
+    "general_data": {
+        "description": "1L FLiBe, first cold irradiation",
+        "run_nb": 1,
+        "salt": "FLiBe",
+        "stock": "Alphatec reactor grade",
+        "salt_mass": {
+            "value": 1.97,
+            "unit": "kg"
+        },
+        "temperature": {
+            "dip_setpoints": [
+                {
+                    "value": 0,
+                    "unit": "C",
+                    "set_time": "11/19/2025 11:20"
+                },
+                {
+                    "value": 200,
+                    "unit": "C",
+                    "set_time": "11/24/2025 12:22"
+                },
+                {
+                    "value": 230,
+                    "unit": "C",
+                    "set_time": "11/24/2025 13:45"
+                },
+                {
+                    "value": 0,
+                    "unit": "C",
+                    "set_time": "11/25/2025 11:30"
+                },
+                {
+                    "value": 250,
+                    "unit": "C",
+                    "set_time": "11/25/2025 12:45"
+                },
+                {
+                    "value": 400,
+                    "unit": "C",
+                    "set_time": "11/25/2025 12:50"
+                },
+                {
+                    "value": 230,
+                    "unit": "C",
+                    "set_time": "11/25/2025 14:50"
+                },
+                {
+                    "value": 400,
+                    "unit": "C",
+                    "set_time": "11/29/2025 11:28"
+                },
+                {
+                    "value": 0,
+                    "unit": "C",
+                    "set_time": "12/6/2025 10:30"
+                },
+                {
+                    "value": 400,
+                    "unit": "C",
+                    "set_time": "12/8/2025 17:08"
+                }
+            ],
+            "logs": {
+                "filename": "FLiBe_1L_run_1_temp.csv",
+                "TC1_label": "DIP TC",
+                "TC2_label": "SIDE TC",
+                "TC3_label": "OV SIDE",
+                "TC4_label": "FURNACE"
+            }
+        },
+        "purpose_of_run": "Testing FLiBe irradiation capabilities."
+    },
+    "cover_gas": {
+        "type": "He",
+        "pressure_gas_system": {
+            "value": 10,
+            "unit": "PSIG"
+        },
+        "pressure_gas_crucible": {
+            "value": 6,
+            "unit": "PSIG",
+            "note": "in steady state, upstream from crucible"
+        },
+        "flow_rate_sample": [
+            {
+                "value": 0,
+                "unit": "SCCM",
+                "set_time": "11/19/2025 11:20"
+            },
+            {
+                "value": 30,
+                "unit": "SCCM",
+                "set_time": "11/20/2025 11:45"
+            },
+            {
+                "value": 50,
+                "unit": "SCCM",
+                "set_time": "12/6/2025 13:30"
+            },
+            {
+                "value": 30,
+                "unit": "SCCM",
+                "set_time": "12/7/2025 12:30"
+            }
+        ],
+        "flow_rate_air": {
+            "value": 10,
+            "unit": "SCCM"
+        },
+        "switched_to": {
+            "type": null,
+            "gas_switch_time": null
+        }
+    },
+    "secondary_gas": {
+        "type": "He",
+        "pressure_gas_system": {
+            "value": 10,
+            "unit": "PSIG"
+        },
+        "pressure_gas_crucible": {
+            "value": 5,
+            "unit": "PSIG",
+            "note": "in steady state, at crucible"
+        },
+        "flow_rate_sample": [
+            {
+                "value": 0,
+                "unit": "SCCM",
+                "set_time": "11/19/2025 11:20"
+            },
+            {
+                "value": 50,
+                "unit": "SCCM",
+                "set_time": "11/20/2025 11:45"
+            },
+            {
+                "value": 20,
+                "unit": "SCCM",
+                "set_time": "11/30/2025 12:35"
+            },
+            {
+                "value": 50,
+                "unit": "SCCM",
+                "set_time": "12/6/2025 13:30"
+            },
+            {
+                "value": 20,
+                "unit": "SCCM",
+                "set_time": "12/8/2025 17:08"
+            }
+        ],
+        "flow_rate_air": {
+            "value": 10,
+            "unit": "SCCM"
+        },
+        "switched_to": {
+            "type": null,
+            "gas_switch_time": null
+        }
+    },
+    "generators": [
+        {
+            "name": "P383",
+            "enabled": true,
+            "beam_current": {
+                "value": 55,
+                "unit": "uA"
+            },
+            "beam_voltage": {
+                "value": 110,
+                "unit": "kV"
+            },
+            "periods": [
+                {
+                    "start": "11/19/2025 11:20",
+                    "end": "11/19/2025 11:44"
+                },
+                {
+                    "start": "11/19/2025 11:46",
+                    "end": "11/19/2025 23:22"
+                }
+            ]
+        }
+    ],
+    "notes": "P-383 positioned under the work surface, cooled with blower airflow from the front. Gap between bottom surface of epoxy and the generator under 1/4 inch.",
+    "neutron_detection": {
+        "foils": {
+            "enabled": true,
+            "position": "on generator, at target plane, facing top and bottom",
+            "materials": [
+                {
+                    "position": null,
+                    "material": "Nb",
+                    "designator": null,
+                    "irradiation_date": "11/19/2025",
+                    "number_of_foils": null,
+                    "distance_to_source": {
+                        "value": null,
+                        "unit": "cm",
+                        "note": null
+                    },
+                    "mass": {
+                        "value": null,
+                        "unit": "g"
+                    },
+                    "mass_err": {
+                        "value": null,
+                        "unit": "g"
+                    },
+                    "thickness": {
+                        "value": null,
+                        "unit": "inch"
+                    }
+                },
+                {
+                    "position": null,
+                    "material": "Zr",
+                    "designator": null,
+                    "irradiation_date": "11/19/2025",
+                    "number_of_foils": null,
+                    "distance_to_source": {
+                        "value": null,
+                        "unit": "cm"
+                    },
+                    "mass": {
+                        "value": null,
+                        "unit": "g"
+                    },
+                    "mass_err": {
+                        "value": null,
+                        "unit": "g"
+                    },
+                    "thickness": {
+                        "value": null,
+                        "unit": "inch"
+                    }
+                }
+            ]
+        },
+        "diamond": {
+            "enabled": false,
+            "note": null,
+            "position": null
+        },
+        "proton_recoil_telecsope": {
+            "enabled": true,
+            "note": "ROSY failed ~8h into the run.",
+            "position": null
+        }
+    },
+    "timestamps": {
+        "run_start": "11/19/2025 11:20"
+    },
+    "tritium_blank_set": {
+        "filename": "SLR_BLANK_SCAN.csv",
+        "parameter": "tSIE",
+        "blanks": {
+            "SLR_BL2": {
+                "water_volume": {
+                    "value": 2,
+                    "unit": "ml"
+                },
+                "scint_volume": {
+                    "value": 10,
+                    "unit": "ml"
+                }
+            },
+            "SLR_BL4": {
+                "water_volume": {
+                    "value": 4,
+                    "unit": "ml"
+                },
+                "scint_volume": {
+                    "value": 10,
+                    "unit": "ml"
+                }
+            },
+            "SLR_BL6": {
+                "water_volume": {
+                    "value": 6,
+                    "unit": "ml"
+                },
+                "scint_volume": {
+                    "value": 10,
+                    "unit": "ml"
+                }
+            },
+            "SLR_BL8": {
+                "water_volume": {
+                    "value": 8,
+                    "unit": "ml"
+                },
+                "scint_volume": {
+                    "value": 10,
+                    "unit": "ml"
+                }
+            },
+            "SLR_BL9": {
+                "water_volume": {
+                    "value": 9,
+                    "unit": "ml"
+                },
+                "scint_volume": {
+                    "value": 10,
+                    "unit": "ml"
+                }
+            },
+            "SLR_BL10": {
+                "water_volume": {
+                    "value": 10,
+                    "unit": "ml"
+                },
+                "scint_volume": {
+                    "value": 10,
+                    "unit": "ml"
+                }
+            },
+            "SLR_BL11": {
+                "water_volume": {
+                    "value": 11,
+                    "unit": "ml"
+                },
+                "scint_volume": {
+                    "value": 10,
+                    "unit": "ml"
+                }
+            }
+        }
+    },
+    "tritium_detection": {
+        "IV": {
+            "0": {
+                "planned_sample_time": "11/20/2025 11:20",
+                "actual_sample_time": "11/20/2025 10:40",
+                "lsc_vials_filenames": {
+                    "1": "1L-FLB_IV_1-0_OV_1-0.csv",
+                    "2": "1L-FLB_IV_1-0_OV_1-0.csv",
+                    "3": "1L-FLB_IV_1-0_OV_1-0.csv",
+                    "4": "1L-FLB_IV_1-0_OV_1-0.csv"
+                }
+            },
+            "1": {
+                "planned_sample_time": "11/21/2025 11:20",
+                "actual_sample_time": "11/21/2025 13:45",
+                "lsc_vials_filenames": {
+                    "1": "1L-FLB_IV_1-3_AND_IV_1-1_1-2_RE.csv",
+                    "2": "1L-FLB_IV_1-3_AND_IV_1-1_1-2_RE.csv",
+                    "3": "1L-FLB_IV_1-3_AND_IV_1-1_1-2_RE.csv",
+                    "4": "1L-FLB_IV_1-3_AND_IV_1-1_1-2_RE.csv"
+                }
+            },
+            "2": {
+                "planned_sample_time": "11/22/2025 11:20",
+                "actual_sample_time": "11/22/2025 13:25",
+                "lsc_vials_filenames": {
+                    "1": "1L-FLB_IV_1-3_AND_IV_1-1_1-2_RE.csv",
+                    "2": "1L-FLB_IV_1-3_AND_IV_1-1_1-2_RE.csv",
+                    "3": "1L-FLB_IV_1-3_AND_IV_1-1_1-2_RE.csv",
+                    "4": "1L-FLB_IV_1-3_AND_IV_1-1_1-2_RE.csv"
+                }
+            },
+            "3": {
+                "planned_sample_time": "11/23/2025 11:20",
+                "actual_sample_time": "11/23/2025 14:15",
+                "lsc_vials_filenames": {
+                    "1": "1L-FLB_IV_1-3_AND_IV_1-1_1-2_RE.csv",
+                    "2": "1L-FLB_IV_1-3_AND_IV_1-1_1-2_RE.csv",
+                    "3": "1L-FLB_IV_1-3_AND_IV_1-1_1-2_RE.csv",
+                    "4": "1L-FLB_IV_1-3_AND_IV_1-1_1-2_RE.csv"
+                }
+            },
+            "4": {
+                "planned_sample_time": "11/24/2025 11:20",
+                "actual_sample_time": "11/24/2025 12:15",
+                "lsc_vials_filenames": {
+                    "1": "1L-FLB_IV_1-4_OV_1-2.csv",
+                    "2": "1L-FLB_IV_1-4_OV_1-2.csv",
+                    "3": "1L-FLB_IV_1-4_OV_1-2.csv",
+                    "4": "1L-FLB_IV_1-4_OV_1-2.csv"
+                }
+            },
+            "5": {
+                "planned_sample_time": "11/25/2025 11:20",
+                "actual_sample_time": "11/25/2025 12:50",
+                "lsc_vials_filenames": {
+                    "1": "1L-FLB_IV_1-5.csv",
+                    "2": "1L-FLB_IV_1-5.csv",
+                    "3": "1L-FLB_IV_1-5.csv",
+                    "4": "1L-FLB_IV_1-5.csv"
+                }
+            },
+            "6": {
+                "planned_sample_time": "11/26/2025 11:20",
+                "actual_sample_time": "11/26/2025 15:30",
+                "lsc_vials_filenames": {
+                    "1": "1L-FLB_IV_1-6.csv",
+                    "2": "1L-FLB_IV_1-6.csv",
+                    "3": "1L-FLB_IV_1-6.csv",
+                    "4": "1L-FLB_IV_1-6.csv"
+                }
+            },
+            "7": {
+                "planned_sample_time": "11/27/2025 11:20",
+                "actual_sample_time": "11/27/2025 12:35",
+                "lsc_vials_filenames": {
+                    "1": "1L-FLB_IV_1-7.csv",
+                    "2": "1L-FLB_IV_1-7.csv",
+                    "3": "1L-FLB_IV_1-7.csv",
+                    "4": "1L-FLB_IV_1-7.csv"
+                }
+            },
+            "8": {
+                "planned_sample_time": "11/29/2025 11:20",
+                "actual_sample_time": "11/29/2025 11:05",
+                "lsc_vials_filenames": {
+                    "1": "1L-FLB_IV_1-8_OV_1-3.csv",
+                    "2": "1L-FLB_IV_1-8_OV_1-3.csv",
+                    "3": "1L-FLB_IV_1-8_OV_1-3.csv",
+                    "4": "1L-FLB_IV_1-8_OV_1-3.csv"
+                }
+            },
+            "9": {
+                "planned_sample_time": "11/30/2025 11:20",
+                "actual_sample_time": "11/30/2025 12:35",
+                "lsc_vials_filenames": {
+                    "1": "1L-FLB_IV_1-9.csv",
+                    "2": "1L-FLB_IV_1-9.csv",
+                    "3": "1L-FLB_IV_1-9.csv",
+                    "4": "1L-FLB_IV_1-9.csv"
+                }
+            },
+            "10": {
+                "planned_sample_time": "12/1/2025 11:20",
+                "actual_sample_time": "12/1/2025 13:20",
+                "lsc_vials_filenames": {
+                    "1": "1L-FLB_IV_1-10.csv",
+                    "2": "1L-FLB_IV_1-10.csv",
+                    "3": "1L-FLB_IV_1-10.csv",
+                    "4": "1L-FLB_IV_1-10.csv"
+                }
+            },
+            "11": {
+                "planned_sample_time": "12/2/2025 11:20",
+                "actual_sample_time": "12/2/2025 11:55",
+                "lsc_vials_filenames": {
+                    "1": "1L-FLB_IV_1-11.csv",
+                    "2": "1L-FLB_IV_1-11.csv",
+                    "3": "1L-FLB_IV_1-11.csv",
+                    "4": "1L-FLB_IV_1-11.csv"
+                }
+            },
+            "12": {
+                "planned_sample_time": "12/3/2025 11:20",
+                "actual_sample_time": "12/3/2025 12:30",
+                "lsc_vials_filenames": {
+                    "1": "1L-FLB_IV_1-14_1-12.csv",
+                    "2": "1L-FLB_IV_1-14_1-12.csv",
+                    "3": "1L-FLB_IV_1-14_1-12.csv",
+                    "4": "1L-FLB_IV_1-14_1-12.csv"
+                }
+            },
+            "13": {
+                "planned_sample_time": "12/4/2025 11:20",
+                "actual_sample_time": "12/4/2025 12:45",
+                "lsc_vials_filenames": {
+                    "1": "1L-FLB_IV_1-15_1-13_OV_1-4.csv",
+                    "2": "1L-FLB_IV_1-15_1-13_OV_1-4.csv",
+                    "3": "1L-FLB_IV_1-15_1-13_OV_1-4.csv",
+                    "4": "1L-FLB_IV_1-15_1-13_OV_1-4.csv"
+                }
+            },
+            "14": {
+                "planned_sample_time": "12/6/2025 11:20",
+                "actual_sample_time": "12/6/2025 16:00",
+                "lsc_vials_filenames": {
+                    "1": "1L-FLB_IV_1-14_1-12.csv",
+                    "2": "1L-FLB_IV_1-14_1-12.csv",
+                    "3": "1L-FLB_IV_1-14_1-12.csv",
+                    "4": "1L-FLB_IV_1-14_1-12.csv"
+                }
+            },
+            "15": {
+                "planned_sample_time": "12/7/2025 11:20",
+                "actual_sample_time": "12/7/2025 12:35",
+                "lsc_vials_filenames": {
+                    "1": "1L-FLB_IV_1-15_1-13_OV_1-4.csv",
+                    "2": "1L-FLB_IV_1-15_1-13_OV_1-4.csv",
+                    "3": "1L-FLB_IV_1-15_1-13_OV_1-4.csv",
+                    "4": "1L-FLB_IV_1-15_1-13_OV_1-4.csv"
+                }
+            }
+        },
+        "OV": {
+            "0": {
+                "planned_sample_time": "11/20/2025 11:20",
+                "actual_sample_time": "11/20/2025 10:40",
+                "lsc_vials_filenames": {
+                    "1": "1L-FLB_IV_1-0_OV_1-0.csv",
+                    "2": "1L-FLB_IV_1-0_OV_1-0.csv",
+                    "3": "1L-FLB_IV_1-0_OV_1-0.csv",
+                    "4": "1L-FLB_IV_1-0_OV_1-0.csv"
+                }
+            },
+            "1": {
+                "planned_sample_time": "11/22/2025 11:20",
+                "actual_sample_time": "11/22/2025 13:25",
+                "lsc_vials_filenames": {
+                    "1": "1L-FLB_IV_1-2_OV_1-1.csv",
+                    "2": "1L-FLB_IV_1-2_OV_1-1.csv",
+                    "3": "1L-FLB_IV_1-2_OV_1-1.csv",
+                    "4": "1L-FLB_IV_1-2_OV_1-1.csv"
+                }
+            },
+            "2": {
+                "planned_sample_time": "11/24/2025 11:20",
+                "actual_sample_time": "11/24/2025 12:15",
+                "lsc_vials_filenames": {
+                    "1": "1L-FLB_IV_1-4_OV_1-2.csv",
+                    "2": "1L-FLB_IV_1-4_OV_1-2.csv",
+                    "3": "1L-FLB_IV_1-4_OV_1-2.csv",
+                    "4": "1L-FLB_IV_1-4_OV_1-2.csv"
+                }
+            },
+            "3": {
+                "planned_sample_time": "11/29/2025 11:20",
+                "actual_sample_time": "11/29/2025 11:05",
+                "lsc_vials_filenames": {
+                    "1": "1L-FLB_IV_1-8_OV_1-3.csv",
+                    "2": "1L-FLB_IV_1-8_OV_1-3.csv",
+                    "3": "1L-FLB_IV_1-8_OV_1-3.csv",
+                    "4": "1L-FLB_IV_1-8_OV_1-3.csv"
+                }
+            },
+            "4": {
+                "planned_sample_time": "12/6/2025 11:20",
+                "actual_sample_time": "12/6/2025 16:00",
+                "lsc_vials_filenames": {
+                    "1": "1L-FLB_IV_1-15_1-13_OV_1-4.csv",
+                    "2": "1L-FLB_IV_1-15_1-13_OV_1-4.csv",
+                    "3": "1L-FLB_IV_1-15_1-13_OV_1-4.csv",
+                    "4": "1L-FLB_IV_1-15_1-13_OV_1-4.csv"
+                }
+            }
+        }
+    }
+}
