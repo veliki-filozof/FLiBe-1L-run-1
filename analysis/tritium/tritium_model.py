@@ -89,7 +89,7 @@ def substract_scalar_background(sample: LSCSample, background_bq: float) -> None
     if sample.background_substracted:
             raise ValueError("Background already substracted")
     sample.activity -= background_bq * ureg.Bq
-    if sample.activity.magnitude < 0:
+    if sample.activity.magnitude < 0.07: # MDA Correction
         warnings.warn(
             f"Activity of {sample.name} is negative after substracting background. Setting to zero."
         )
