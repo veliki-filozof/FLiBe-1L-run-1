@@ -5,7 +5,7 @@
         "salt": "FLiBe",
         "stock": "Alphatec reactor grade",
         "salt_mass": {
-            "value": 1.97,
+            "value": 1.95,
             "unit": "kg"
         },
         "temperature": {
@@ -505,10 +505,60 @@
                 "planned_sample_time": "12/9/2025 11:20",
                 "actual_sample_time": "12/9/2025 13:35",
                 "lsc_vials_filenames": {
-                    "1": "1L-FLB_IV_1-17_1-16.csv",
-                    "2": "1L-FLB_IV_1-17_1-16.csv",
-                    "3": "1L-FLB_IV_1-17_1-16.csv",
-                    "4": "1L-FLB_IV_1-17_1-16.csv"
+                    "1": "1L-FLB_IV_1-17_RE_1-18_OV_1-5.csv",
+                    "2": "1L-FLB_IV_1-17_RE_1-18_OV_1-5.csv",
+                    "3": "1L-FLB_IV_1-17_RE_1-18_OV_1-5.csv",
+                    "4": "1L-FLB_IV_1-17_RE_1-18_OV_1-5.csv"
+                }
+            },
+            "18": {
+                "planned_sample_time": "12/10/2025 11:20",
+                "actual_sample_time": "12/10/2025 09:30",
+                "lsc_vials_filenames": {
+                    "1": "1L-FLB_IV_1-17_RE_1-18_OV_1-5.csv",
+                    "2": "1L-FLB_IV_1-17_RE_1-18_OV_1-5.csv",
+                    "3": "1L-FLB_IV_1-17_RE_1-18_OV_1-5.csv",
+                    "4": "1L-FLB_IV_1-17_RE_1-18_OV_1-5.csv"
+                }
+            },
+            "19": {
+                "planned_sample_time": "12/11/2025 11:20",
+                "actual_sample_time": "12/11/2025 11:55",
+                "lsc_vials_filenames": {
+                    "1": "1L-FLB_IV_1-19.csv",
+                    "2": "1L-FLB_IV_1-19.csv",
+                    "3": "1L-FLB_IV_1-19.csv",
+                    "4": "1L-FLB_IV_1-19.csv"
+                }
+            },
+            "20": {
+                "planned_sample_time": "12/12/2025 11:20",
+                "actual_sample_time": "12/12/2025 13:00",
+                "lsc_vials_filenames": {
+                    "1": "1L-FLB_IV_1-20.csv",
+                    "2": "1L-FLB_IV_1-20.csv",
+                    "3": "1L-FLB_IV_1-20.csv",
+                    "4": "1L-FLB_IV_1-20.csv"
+                }
+            },
+            "21": {
+                "planned_sample_time": "12/13/2025 11:20",
+                "actual_sample_time": "12/13/2025 13:05",
+                "lsc_vials_filenames": {
+                    "1": "1L-FLB_IV_1-21_1-22.csv",
+                    "2": "1L-FLB_IV_1-21_1-22.csv",
+                    "3": "1L-FLB_IV_1-21_1-22.csv",
+                    "4": "1L-FLB_IV_1-21_1-22.csv"
+                }
+            },
+            "22": {
+                "planned_sample_time": "12/14/2025 11:20",
+                "actual_sample_time": "12/14/2025 11:50",
+                "lsc_vials_filenames": {
+                    "1": "1L-FLB_IV_1-21_1-22.csv",
+                    "2": "1L-FLB_IV_1-21_1-22.csv",
+                    "3": "1L-FLB_IV_1-21_1-22.csv",
+                    "4": "1L-FLB_IV_1-21_1-22.csv"
                 }
             }
         },
@@ -561,6 +611,16 @@
                     "2": "1L-FLB_IV_1-15_1-13_OV_1-4.csv",
                     "3": "1L-FLB_IV_1-15_1-13_OV_1-4.csv",
                     "4": "1L-FLB_IV_1-15_1-13_OV_1-4.csv"
+                }
+            },
+            "5": {
+                "planned_sample_time": "12/10/2025 11:20",
+                "actual_sample_time": "12/10/2025 10:10",
+                "lsc_vials_filenames": {
+                    "1": "1L-FLB_IV_1-17_RE_1-18_OV_1-5.csv",
+                    "2": "1L-FLB_IV_1-17_RE_1-18_OV_1-5.csv",
+                    "3": "1L-FLB_IV_1-17_RE_1-18_OV_1-5.csv",
+                    "4": "1L-FLB_IV_1-17_RE_1-18_OV_1-5.csv"
                 }
             }
         }
