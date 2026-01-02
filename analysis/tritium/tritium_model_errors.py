@@ -233,14 +233,43 @@ sampling_times = {
 replacement_times_top = sampling_times["IV"]
 replacement_times_walls = sampling_times["OV"]
 
-# read gas change time
-if general_data["cover_gas"]["switched_to"]["gas_switch_time"]:
-    gas_switch_time = datetime.strptime(
-        general_data["cover_gas"]["switched_to"]["gas_switch_time"], "%m/%d/%Y %H:%M"
-    )
-    gas_switch_deltatime = gas_switch_time - start_time
-    gas_switch_deltatime = gas_switch_deltatime.total_seconds() * ureg.s
-    gas_switch_deltatime = gas_switch_deltatime.to(ureg.day)
+# read cover gas change times
+cover_gas_switch_deltatimes = []
+if "switched_to" in general_data["cover_gas"] and general_data["cover_gas"]["switched_to"]:
+    switched_to_list = general_data["cover_gas"]["switched_to"]
+    
+    # Handle both old format (single dict) and new format (list of dicts)
+    if isinstance(switched_to_list, dict):
+        switched_to_list = [switched_to_list]
+    
+    for gas_switch in switched_to_list:
+        if gas_switch.get("gas_switch_time"):
+            gas_switch_time = datetime.strptime(
+                gas_switch["gas_switch_time"], "%m/%d/%Y %H:%M"
+            )
+            gas_switch_deltatime = gas_switch_time - start_time
+            gas_switch_deltatime = gas_switch_deltatime.total_seconds() * ureg.s
+            gas_switch_deltatime = gas_switch_deltatime.to(ureg.day)
+            cover_gas_switch_deltatimes.append(gas_switch_deltatime)
+
+# read secondary gas change times
+secondary_gas_switch_deltatimes = []
+if "switched_to" in general_data["secondary_gas"] and general_data["secondary_gas"]["switched_to"]:
+    switched_to_list = general_data["secondary_gas"]["switched_to"]
+    
+    # Handle both old format (single dict) and new format (list of dicts)
+    if isinstance(switched_to_list, dict):
+        switched_to_list = [switched_to_list]
+    
+    for gas_switch in switched_to_list:
+        if gas_switch.get("gas_switch_time"):
+            gas_switch_time = datetime.strptime(
+                gas_switch["gas_switch_time"], "%m/%d/%Y %H:%M"
+            )
+            gas_switch_deltatime = gas_switch_time - start_time
+            gas_switch_deltatime = gas_switch_deltatime.total_seconds() * ureg.s
+            gas_switch_deltatime = gas_switch_deltatime.to(ureg.day)
+            secondary_gas_switch_deltatimes.append(gas_switch_deltatime)
 
 # tritium model
 
