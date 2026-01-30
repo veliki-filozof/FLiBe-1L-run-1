@@ -315,10 +315,10 @@ for generator in general_data["generators"]:
 
 # TODO replace by neutron rate measured with HPGe
 neutron_rate = (
-    2.85e8 * ureg.neutron * ureg.s**-1
+    2.628e8 * ureg.neutron * ureg.s**-1
     # 1.3e09 * ureg.neutron * ureg.s**-1
 )  # based on manufacturer test data for generator settings
-neutron_rate_uncertainty = 4.9e06 * ureg.neutron * ureg.s**-1
+neutron_rate_uncertainty = 1.994e07 * ureg.neutron * ureg.s**-1
 neutron_rate_relative_uncertainty = (neutron_rate_uncertainty / neutron_rate).to(
     ureg.dimensionless
 )
