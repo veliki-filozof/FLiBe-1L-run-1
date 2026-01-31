@@ -24,7 +24,7 @@ def baby_geometry(x_c: float, y_c: float, z_c: float):
     he_thickness = 0.6
     inconel_thickness = 0.3
     heater_gap = 0.878
-    cllif_thickness = 6.388 + 0.13022  # without heater: 0.1081
+    cllif_thickness = 6.388 + 0.13022  # without heater: 0.1081 
     gap_thickness = 4.605
     cap = 1.422
     firebrick_thickness = 15.24
@@ -376,8 +376,19 @@ def baby_model():
 
     settings = openmc.Settings()
 
-    src = A325_generator_diamond((x_c, y_c, z_c - 5.635), (0, 0, 1))
-    settings.source = src
+    dt_source = openmc.IndependentSource()
+    dt_source.space = openmc.stats.Point((x_c, y_c, z_c - 5.68))
+    dt_source.angle = openmc.stats.Isotropic()
+    dt_source.energy = openmc.stats.Discrete([14.1e6], [1.0])
+    # dt_source.strength = 1.00
+
+    dd_source = openmc.IndependentSource()
+    dd_source.space = openmc.stats.Point((x_c, y_c, z_c - 5.68))
+    dd_source.angle = openmc.stats.Isotropic()
+    dd_source.energy = openmc.stats.Discrete([2.45e6], [1.0])
+    # dd_source.strength = 0.2  # fraction of DD neutrons with respect to DT neutrons
+
+    settings.source = [dd_source]
     settings.batches = 100
     settings.inactive = 0
     settings.run_mode = "fixed source"
@@ -392,10 +403,23 @@ def baby_model():
     # Specify Tallies
     tallies = openmc.Tallies()
 
+    # TBR tally
     tbr_tally = openmc.Tally(name="TBR")
     tbr_tally.scores = ["(n,Xt)"]
     tbr_tally.filters = [openmc.CellFilter(cllif_cell)]
     tallies.append(tbr_tally)
+
+    # Multiplication tally
+    tally = openmc.Tally(name="nmult")
+    tally.filters = [openmc.CellFilter(cllif_cell)]
+    tally.scores = ["(n,2n)"]
+    tallies.append(tally)
+
+    # TBR from multiplied neutrons
+    tally = openmc.Tally(name="TBR_multiplied")
+    tally.filters = [openmc.CellFilter(cllif_cell), openmc.CellBornFilter(cllif_cell)]
+    tally.scores = ["(n,Xt)"]
+    tallies.append(tally)
 
     model = vault.build_vault_model(
         settings=settings,
@@ -410,7 +434,7 @@ def baby_model():
 
 if __name__ == "__main__":
     model = baby_model()
-    model.run()
+    model.run(geometry_debug=True)
     sp = openmc.StatePoint(f"statepoint.{model.settings.batches}.h5")
     tbr_tally = sp.get_tally(name="TBR").get_pandas_dataframe()
 
