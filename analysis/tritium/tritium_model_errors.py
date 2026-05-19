@@ -499,7 +499,7 @@ k_wall = optimised_ratio * k_top
 baby_model = Model(
     radius=baby_radius,
     height=baby_height,
-    TBR=measured_TBR,
+    TBR=calculated_TBR,
     neutron_rate=neutron_rate,
     irradiations=irradiations,
     k_top=k_top,
@@ -537,6 +537,10 @@ processed_data = {
     "measured_TBR": {
         "value": measured_TBR.magnitude,
         "unit": str(measured_TBR.units),
+    },
+    "measured_TBR_error": {
+        "value": measured_TBR_error.magnitude,
+        "unit": str(measured_TBR_error.units),
     },
     "TBR_used_in_model": {
         "value": baby_model.TBR.magnitude,
