@@ -1,4 +1,4 @@
-name: libra-run-env
+name: flibe-1l-run-1
 channels:
   - conda-forge
 dependencies:
@@ -9,8 +9,7 @@ dependencies:
   - scipy # add version tag
   - matplotlib # add version tag
   - sympy
-  - pandas
-  - pint-pandas
+  - pandas<3
   - nbconvert
   - ipykernel
   - pint

@@ -1,0 +1,71 @@
+Assay Definition
+
+Assay Description:
+1L FLiBe BABY Experiment standard count, beginning with run FLB-1
+Assay Type: DPM (Single)
+Report Name: Standard report
+Output Data Path: C:\Packard\Tricarb\Results\Default\NEW_Flibe_Long\20260112_0952\Replay_20260113_163354
+Raw Results Path: C:\Packard\Tricarb\Results\Default\NEW_Flibe_Long\20260112_0952\20260112_0952.results
+Comma-Delimited File Name: C:\Packard\Tricarb\Results\Default\NEW_Flibe_Long\20260112_0952\Replay_20260113_163354\1L-FLB_IV_1-34_1-35_1-36_1-37_OV_1-14-1_-2.csv
+Assay File Name: C:\Packard\TriCarb\Assays\NEW_Flibe_Long.lsa
+
+Additional Data Files Generated with this Protocol:
+Standard report
+		[Excel]	1L-FLB_IV_1-34_1-35_1-36_1-37_OV_1-14-1_-2.csv
+
+
+Count Conditions
+
+Nuclide: LIBRA UG LLT NM      
+   Quench Indicator: tSIE
+   External Std Terminator (sec): 0.5 2s%
+   Pre-Count Delay (min): 0.00
+Quench Set:                   
+   Low Energy: 3H-UG-LLT-NM-C
+Count Time (min): 100.00
+Count Mode: Normal                                          
+Assay Count Cycles: 1         Repeat Sample Count: 1        
+Number of Vials/Sample: 1     Calculate % Reference: Off                                  
+
+
+Background Subtract: Off
+Low CPM Threshold: Off
+2 Sigma % Terminator: Off
+
+Regions         LL       UL
+A              0.5      5.0
+B              0.5     10.0
+C              0.0     18.6
+
+
+Count Corrections
+
+Static Controller: On         Luminescence Correction: On     GCT: n/a
+Colored Samples: Off          Heterogeneity Monitor: Off      PAC: Disabled
+Coincidence Time (nsec): 18   Delay Before Burst (nsec): 75   PAC Strength: n/a   Auxiliary Spectrum: n/a
+
+
+S#,SMPL_ID,Bq:1,CPMA,A:2S%,LUM,tSIE,Eff Nuc1 In A,Count Time,DPM1
+1,1L-FLB-IV_1-34-1,0.301,5.020,9.01,0,327.13,27.79,100,18.062
+2,1L-FLB-IV_1-34-2,0.301,4.540,9.43,0,292.40,25.17,100,18.038
+3,1L-FLB-IV_1-34-3,0.294,4.420,9.60,0,291.38,25.08,100,17.623
+4,1L-FLB-IV_1-34-4,0.280,4.230,9.77,0,292.08,25.14,100,16.825
+Missing vial 5.
+6,1L-FLB-IV_1-35-1,0.323,4.540,9.49,0,272.19,23.40,100,19.405
+7,1L-FLB-IV_1-35-2,0.272,4.100,9.93,0,291.34,25.08,100,16.349
+8,1L-FLB-IV_1-35-3,0.263,4.330,9.66,0,321.05,27.43,100,15.783
+9,1L-FLB-IV_1-35-4,0.281,4.240,9.76,0,292.58,25.18,100,16.836
+Missing vial 10.
+11,1L-FLB-IV_1-36-1,0.256,4.140,9.88,0,313.05,26.94,100,15.367
+12,1L-FLB-IV_1-36-2,0.275,4.150,9.91,0,291.86,25.12,100,16.519
+13,1L-FLB-IV_1-36-3,0.256,4.220,9.78,0,322.58,27.53,100,15.332
+14,1L-FLB-IV_1-36-4,0.278,4.210,9.79,0,293.46,25.26,100,16.667
+Missing vial 15.
+16,1L-FLB-IV_1-37-1,0.277,4.350,9.70,0,304.56,26.21,100,16.596
+17,1L-FLB-IV_1-37-2,0.264,3.960,10.10,0,290.47,25.00,100,15.838
+18,1L-FLB-IV_1-37-3,0.240,3.960,10.10,0,322.22,27.50,100,14.398
+19,1L-FLB-IV_1-37-4,0.263,3.960,10.10,0,292.06,25.14,100,15.752
+Missing vial 20.
+21,1L-FLB-OV_1-14-1,0.376,5.990,8.23,0,308.63,26.56,100,22.551
+22,1L-FLB-OV_1-14-2,0.321,4.810,9.16,0,290.32,24.99,100,19.248
+23,Sample #23,0.277,4.111,26.97,0,286.85,24.69,13,16.650
